@@ -74,7 +74,7 @@ export default function LoginSimple() {
                 className="w-20 h-20 object-contain"
               />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">OILDELIVERY</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">ONE DELIVERY</h1>
             <p className="text-gray-600">Oil Delivery Management System</p>
           </div>
 
@@ -127,7 +127,7 @@ export default function LoginSimple() {
 
             <div className="mt-6 text-center">
               <div className="text-xs text-gray-400 space-y-1">
-                <p>OILDELIVERY Management System</p>
+                <p>ONE DELIVERY Management System</p>
                 <p>Version 2.1.0 | August 2025</p>
                 <p>© 2025 Oil Delivery Solutions</p>
               </div>

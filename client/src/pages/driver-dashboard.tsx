@@ -246,7 +246,7 @@ export default function DriverDashboard({ user }: DriverDashboardProps) {
                 />
               </div>
               <div>
-                <h1 className="text-lg sm:text-xl font-bold text-gray-900">OILDELIVERY</h1>
+                <h1 className="text-lg sm:text-xl font-bold text-gray-900">ONE DELIVERY</h1>
                 <p className="text-xs sm:text-sm text-gray-500">Driver Dashboard</p>
               </div>
             </div>
