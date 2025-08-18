@@ -124,17 +124,6 @@ export default function LoginSimple() {
                 'Sign In'
               )}
             </Button>
-
-            <div className="mt-6 text-center">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <p className="text-sm text-blue-800 font-medium mb-2">Demo Accounts:</p>
-                <div className="text-xs text-blue-600 space-y-1">
-                  <p><strong>Admin:</strong> asif.s@ekkanoo.com.bh</p>
-                  <p><strong>Driver:</strong> Any other email</p>
-                  <p><strong>Password:</strong> Any password</p>
-                </div>
-              </div>
-            </div>
           </div>
         </CardContent>
       </Card>
