@@ -1,0 +1,38 @@
+~/workspace$ git init
+git add .
+git commit -m "Initial commit: ONE DELIVERY oil management system"
+git remote add origin https://github.com/asif1001/onedelivery.git
+git branch -M main
+git push -u origin main
+error: could not lock config file /home/runner/workspace/.git/config: File exists
+error: could not lock config file /home/runner/workspace/.git/config: File exists
+error: could not lock config file /home/runner/workspace/.git/config: File exists
+fatal: could not set 'core.repositoryformatversion' to '0'
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+error: remote origin already exists.
+error: could not lock config file .git/config
+fatal: branch is renamed, but update of config-file failed
+Enumerating objects: 71, done.
+Counting objects: 100% (71/71), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (53/53), done.
+Writing objects:  29% (16/55), 16.00 KiBWriting objects:  29% (16/55), 3.63 MiB Writing objects:  29% (16/55), 9.36 MiB Writing objects:  29% (16/55), 15.18 MiBWriting objects:  29% (16/55), 20.94 MiBWriting objects:  29% (16/55), 26.62 MiBWriting objects:  29% (16/55), 32.38 MiBWriting objects:  29% (16/55), 38.13 MiBWriting objects:  29% (16/55), 43.86 MiBWriting objects:  29% (16/55), 49.70 MiBWriting objects:  29% (16/55), 55.37 MiBWriting objects:  29% (16/55), 61.19 MiBWriting objects:  30% (17/55), 64.00 MiBWriting objects:  32% (18/55), 64.00 MiBWriting objects:  34% (19/55), 64.00 MiBWriting objects:  36% (20/55), 64.00 MiBWriting objects:  38% (21/55), 64.00 MiBWriting objects:  40% (22/55), 64.00 MiBWriting objects:  41% (23/55), 64.00 MiBWriting objects:  43% (24/55), 64.00 MiBWriting objects:  45% (25/55), 64.00 MiBWriting objects:  47% (26/55), 64.00 MiBWriting objects:  50% (28/55), 64.00 MiBWriting objects:  52% (29/55), 64.00 MiBWriting objects:  54% (30/55), 64.00 MiBWriting objects:  56% (31/55), 64.00 MiBWriting objects:  58% (32/55), 64.00 MiBWriting objects:  60% (33/55), 64.00 MiBWriting objects:  61% (34/55), 64.00 MiBWriting objects:  63% (35/55), 64.00 MiBWriting objects:  65% (36/55), 64.00 MiBWriting objects:  67% (37/55), 64.00 MiBWriting objects:  69% (38/55), 64.00 MiBWriting objects:  70% (39/55), 64.00 MiBWriting objects:  72% (40/55), 64.00 MiBWriting objects:  74% (41/55), 64.00 MiBWriting objects:  76% (42/55), 64.00 MiBWriting objects:  78% (43/55), 64.00 MiBWriting objects:  80% (44/55), 64.00 MiBWriting objects:  81% (45/55), 64.00 MiBWriting objects:  83% (46/55), 64.00 MiBWriting objects:  85% (47/55), 64.00 MiBWriting objects:  87% (48/55), 64.00 MiBWriting objects:  89% (49/55), 64.00 MiBWriting objects:  90% (50/55), 64.00 MiBWriting objects:  92% (51/55), 64.00 MiBWriting objects:  94% (52/55), 64.00 MiBWriting objects:  96% (53/55), 64.00 MiBWriting objects:  98% (54/55), 64.00 MiBWriting objects: 100% (55/55), 64.00 MiBWriting objects: 100% (55/55), 64.35 MiB | 4.99 MiB/s, done.
+Total 55 (delta 44), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (44/44), completed with 13 local objects.
+remote: warning: See https://gh.io/lfs for more information.
+remote: warning: File attached_assets/LoginDrive_1755538613904.zip is 64.46 MB; this is larger than GitHub's recommended maximum file size of 50.00 MB
+remote: warning: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/asif1001/delivery.git
+   cdf54e9..b84233a  main -> main
+error: could not lock config file .git/config: File exists
+error: unable to write upstream branch configuration
+hint:
+hint: After fixing the error cause you may try to fix up
+hint: the remote tracking information by invoking:
+hint:   git branch --set-upstream-to=origin/refs/heads/main
+~/workspace$ ^C
+~/workspace$ 
