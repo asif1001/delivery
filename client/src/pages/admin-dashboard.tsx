@@ -652,7 +652,11 @@ export default function AdminDashboard({ user }: AdminDashboardProps) {
           <div className="flex justify-between items-center h-14 sm:h-16">
             <div className="flex items-center">
               <div className="mr-3">
-                <OilDeliveryLogo className="w-10 h-10 sm:w-12 sm:h-12" />
+                <img 
+                  src="/logo.png" 
+                  alt="Oil Delivery Logo" 
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-lg sm:text-xl font-bold text-gray-900">OILDELIVERY</h1>

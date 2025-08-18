@@ -68,7 +68,11 @@ export default function LoginSimple() {
         <CardContent className="p-8">
           <div className="text-center mb-8">
             <div className="flex justify-center mb-4">
-              <OilDeliveryLogo className="w-20 h-20" />
+              <img 
+                src="/logo.png" 
+                alt="Oil Delivery Logo" 
+                className="w-20 h-20 object-contain"
+              />
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">OILDELIVERY</h1>
             <p className="text-gray-600">Oil Delivery Management System</p>
