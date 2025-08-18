@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import { OilDeliveryLogo } from '@/components/ui/logo';
 
 export default function LoginSimple() {
   const [email, setEmail] = useState('');
@@ -66,8 +67,11 @@ export default function LoginSimple() {
       <Card className="w-full max-w-md">
         <CardContent className="p-8">
           <div className="text-center mb-8">
+            <div className="flex justify-center mb-4">
+              <OilDeliveryLogo className="w-20 h-20" />
+            </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">OILDELIVERY</h1>
-            <p className="text-gray-600">Simple Login - Demo Version</p>
+            <p className="text-gray-600">Oil Delivery Management System</p>
           </div>
 
           <div className="space-y-6">

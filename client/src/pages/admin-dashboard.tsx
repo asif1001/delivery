@@ -49,6 +49,7 @@ import { TransactionViewer } from "@/components/TransactionViewer";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { Link } from "wouter";
+import { OilDeliveryLogo } from "@/components/ui/logo";
 
 // Task interface
 interface Task {
@@ -650,12 +651,8 @@ export default function AdminDashboard({ user }: AdminDashboardProps) {
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
             <div className="flex items-center">
-              <div className="bg-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center mr-3 shadow-lg p-1">
-                <img 
-                  src="/logo.png" 
-                  alt="OilDelivery Logo" 
-                  className="w-full h-full object-contain"
-                />
+              <div className="mr-3">
+                <OilDeliveryLogo className="w-10 h-10 sm:w-12 sm:h-12" />
               </div>
               <div>
                 <h1 className="text-lg sm:text-xl font-bold text-gray-900">OILDELIVERY</h1>
