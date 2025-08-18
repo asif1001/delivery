@@ -1,98 +1,52 @@
-# Fix Deployment File - Run These Commands
+# Fix Firebase Configuration in GitHub Codespaces
 
-## The deployment file got corrupted. Run these exact commands in GitHub Codespaces:
+## 🚨 Issue
+Your app is running but Firebase configuration is missing because environment variables aren't loaded in the built version.
 
-### Step 1: Fix Git Issues
+## ✅ Quick Fix Commands
+
+Run these commands in your GitHub Codespaces terminal:
+
+### Step 1: Stop the current server
+Press `Ctrl+C` to stop the current serve process
+
+### Step 2: Check environment variables are correct
 ```bash
-git pull origin main
+cat .env
 ```
 
-### Step 2: Create Correct Deployment File
+### Step 3: Rebuild with environment variables
 ```bash
-rm -f .github/workflows/deploy.yml
-cat > .github/workflows/deploy.yml << 'EOF'
-name: Deploy to GitHub Pages
+npm run build
+```
 
-on:
-  push:
-    branches: [ main ]
+### Step 4: Start with proper environment loading
+```bash
+npx vite preview --host 0.0.0.0 --port 3000
+```
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Build application
-      run: npm run build
-      env:
-        VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
-        VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
-        VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
-        VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
-    
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-    
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist
-    
-    - name: Deploy to GitHub Pages
-      uses: actions/deploy-pages@v4
+### Step 5: Alternative - Use development mode
+```bash
+npm run dev
+```
+
+## 🔧 If Still Not Working
+
+Create a local environment file in the dist folder:
+
+```bash
+cat > dist/.env << 'EOF'
+VITE_FIREBASE_API_KEY=AIzaSyChkqfXWJqQr3wbN8jL3qAkmKQEz5Mdr7o
+VITE_FIREBASE_PROJECT_ID=oil-delivery-6bcc4
+VITE_FIREBASE_APP_ID=1:136339484143:web:7b9c14cd8f5a5c8d5e7b8f
+VITE_FIREBASE_STORAGE_BUCKET=oil-delivery-6bcc4.firebasestorage.app
 EOF
 ```
 
-### Step 3: Update Vite Config
-```bash
-cat > vite.config.ts << 'EOF'
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+## 🎯 Expected Result
+After fixing, your oil delivery app should show:
+- Login page with Firebase authentication
+- Admin and driver dashboards
+- All functionality working properly
 
-export default defineConfig({
-  plugins: [react()],
-  base: '/delivery/',
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './client/src'),
-      '@shared': path.resolve(__dirname, './shared'),
-      '@assets': path.resolve(__dirname, './attached_assets'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: './client/index.html'
-    }
-  }
-})
-EOF
-```
-
-### Step 4: Commit and Push
-```bash
-git add .
-git status
-git commit -m "Fix GitHub Pages deployment workflow"
-git push origin main
-```
-
-Your oil delivery app will deploy at: https://asif1001.github.io/delivery/
+The configuration error means Firebase variables aren't being loaded. Try the development mode first as it handles environment variables better.
