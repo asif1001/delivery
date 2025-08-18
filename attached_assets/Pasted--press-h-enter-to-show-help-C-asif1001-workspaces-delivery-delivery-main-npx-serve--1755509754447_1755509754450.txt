@@ -1,0 +1,80 @@
+  ➜  press h + enter to show help
+^C
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ npx serve dist -p 3000
+Need to install the following packages:
+serve@14.2.4
+Ok to proceed? (y) y
+ ERROR  Cannot copy server address to clipboard: Both xsel and fallback failed.
+
+   ┌───────────────────────────────────────┐
+   │                                       │
+   │   Serving!                            │
+   │                                       │
+   │   - Local:    http://localhost:3000   │
+   │   - Network:  http://10.0.2.43:3000   │
+   │                                       │
+   └───────────────────────────────────────┘
+
+^[[B^[[A HTTP  8/18/2025 9:34:35 AM ::1 GET /
+ HTTP  8/18/2025 9:34:35 AM ::1 Returned 200 in 27 ms
+ HTTP  8/18/2025 9:34:37 AM ::1 GET /favicon.ico
+ HTTP  8/18/2025 9:34:37 AM ::1 Returned 404 in 3 ms
+^Z
+[1]+  Stopped                 npx serve dist -p 3000
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/workspaces/delivery/delivery/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/workspaces/delivery/delivery/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.17.0
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ cat .env
+VITE_FIREBASE_API_KEY=AIzaSyChkqfXWJqQr3wbN8jL3qAkmKQEz5Mdr7o
+VITE_FIREBASE_PROJECT_ID=oil-delivery-6bcc4
+VITE_FIREBASE_APP_ID=1:136339484143:web:7b9c14cd8f5a5c8d5e7b8f
+VITE_FIREBASE_STORAGE_BUCKET=oil-delivery-6bcc4.firebasestorage.app
+DATABASE_URL=postgresql://dummy:dummy@localhost:5432/dummy
+PGHOST=localhost
+PGPORT=5432
+PGUSER=dummy
+PGPASSWORD=dummy
+PGDATABASE=dummy
+SESSION_SECRET=oil-delivery-session-secret
+NODE_ENV=development
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ cat > .env << 'EOF'
+VITE_FIREBASE_API_KEY=AIzaSyChkqfXWJqQr3wbN8jL3qAkmKQEz5Mdr7o
+VITE_FIREBASE_PROJECT_ID=oil-delivery-6bcc4
+VITE_FIREBASE_APP_ID=1:136339484143:web:7b9c14cd8f5a5c8d5e7b8f
+VITE_FIREBASE_STORAGE_BUCKET=oil-delivery-6bcc4.firebasestorage.app
+DATABASE_URL=postgresql://dummy:dummy@localhost:5432/dummy
+SESSION_SECRET=oil-delivery-session-secret
+NODE_ENV=development
+EOF
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ npm run dev
+
+> rest-express@1.0.0 dev
+> NODE_ENV=development tsx server/index.ts
+
+/workspaces/delivery/delivery/server/db.ts:9
+  throw new Error(
+        ^
+
+
+Error: DATABASE_URL must be set. Did you forget to provision a database?
+    at <anonymous> (/workspaces/delivery/delivery/server/db.ts:9:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:329:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.17.0
+@asif1001 ➜ /workspaces/delivery/delivery (main) $ AAA
