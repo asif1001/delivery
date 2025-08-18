@@ -34,12 +34,12 @@ import {
 import { deleteObject } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyChkqfXWJqQr3wbN8jL3qAkmKQEz5Mdr7o",
-  authDomain: `${import.meta.env.VITE_FIREBASE_PROJECT_ID || "oil-delivery-6bcc4"}.firebaseapp.com`,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "oil-delivery-6bcc4",
-  storageBucket: `${import.meta.env.VITE_FIREBASE_PROJECT_ID || "oil-delivery-6bcc4"}.firebasestorage.app`,
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: `${import.meta.env.VITE_FIREBASE_PROJECT_ID}.firebaseapp.com`,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || `${import.meta.env.VITE_FIREBASE_PROJECT_ID}.firebasestorage.app`,
   messagingSenderId: "136339484143",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:136339484143:web:7b9c14cd8f5a5c8d5e7b8f",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-KM58SN9WYL"
 };
 
