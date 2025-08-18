@@ -124,6 +124,14 @@ export default function LoginSimple() {
                 'Sign In'
               )}
             </Button>
+
+            <div className="mt-6 text-center">
+              <div className="text-xs text-gray-400 space-y-1">
+                <p>OILDELIVERY Management System</p>
+                <p>Version 2.1.0 | August 2025</p>
+                <p>© 2025 Oil Delivery Solutions</p>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
