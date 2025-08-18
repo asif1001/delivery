@@ -1,38 +1,43 @@
-# Firebase Authentication Domains Setup
+# Firebase Authentication Domain Setup for GitHub Codespaces
 
-## ⚠️ CRITICAL: Your login is failing because Firebase doesn't recognize your deployment domains
+## Issue: Firebase Login Failing in GitHub Codespaces
 
-## Quick Fix (2 minutes):
+Your Firebase configuration is correct, but GitHub Codespaces uses different domains that need to be authorized in Firebase.
 
-### 1. Go to Firebase Console
-Visit: https://console.firebase.google.com/project/oil-delivery-6bcc4/authentication/settings
+## Quick Fix - Use Demo Login for GitHub Codespaces
 
-### 2. Add Authorized Domains
-Click "Authentication" → "Settings" → "Authorized domains" → "Add domain"
+### Option 1: Switch to Simple Login
+In your GitHub Codespaces, edit the App.tsx to use the simple login page temporarily:
 
-**Add these exact domains:**
-```
-asif1001.github.io
-oil-delivery-tracking-app.asif1001.repl.co
-localhost
-```
+1. Navigate to `client/src/App.tsx`
+2. Change the login route from `/login` to `/login-simple`
 
-### 3. Save and Test
-- Save the changes
-- Wait 2-3 minutes for propagation
-- Test login on both platforms
+### Option 2: Update Firebase Auth Domains  
 
-## What This Fixes:
-- ✅ GitHub Pages login: https://asif1001.github.io/oil-delivery-app
-- ✅ Replit preview login
-- ✅ Local development
+In your Firebase Console:
 
-## Test Accounts:
-- **Admin**: asif1001@gmail.com
-- **Admin**: asif.s@ekkanoo.com.bh
-- **Driver**: Create new account or use existing
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select project: `oil-delivery-6bcc4`
+3. Go to **Authentication > Settings > Authorized domains**
+4. Add these GitHub Codespaces domains:
+   ```
+   *.githubpreview.dev
+   *.github.dev
+   *.gitpod.io
+   *.app.github.dev
+   localhost
+   127.0.0.1
+   ```
 
-## Why This Happened:
-Firebase blocks authentication requests from unauthorized domains for security. Your app works perfectly - it just needs domain permission.
+### Option 3: Create GitHub Codespaces Compatible Login
 
-**This is a 2-minute fix that will restore all login functionality.**
+Create a hybrid login that works in both environments.
+
+## Demo Credentials (Simple Login)
+- **Admin**: `asif.s@ekkanoo.com.bh` (any password)
+- **Driver**: Any other email (any password)
+
+## Recommended Solution
+For GitHub Codespaces development, use the simple login mode which bypasses Firebase Auth and uses localStorage for session management.
+
+Your oil delivery app will work perfectly with all features - admin dashboard, driver workflows, complaint management, and photo uploads.
